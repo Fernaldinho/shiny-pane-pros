@@ -205,7 +205,7 @@ function Index() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                className="animate-soft-pulse inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 <MessageCircle className="h-5 w-5" />
                 Solicitar orçamento grátis
@@ -229,9 +229,9 @@ function Index() {
               alt="Profissional da Disk Vidros instalando box de vidro temperado"
               width={1600}
               height={1000}
-              className="w-full rounded-2xl object-cover shadow-xl"
+              className="animate-hero-zoom w-full rounded-2xl object-cover shadow-xl"
             />
-            <div className="absolute -bottom-5 -left-5 hidden rounded-xl border border-border bg-card p-4 shadow-lg md:block">
+            <div className="animate-float absolute -bottom-5 -left-5 hidden rounded-xl border border-border bg-card p-4 shadow-lg md:block">
               <div className="flex items-center gap-2">
                 <Stars />
               </div>
