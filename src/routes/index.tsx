@@ -145,7 +145,11 @@ function Stars() {
   return (
     <div className="flex gap-0.5" aria-label="5 de 5 estrelas">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+        <Star
+          key={i}
+          className="h-4 w-4 animate-twinkle fill-amber-400 text-amber-400"
+          style={{ animationDelay: `${i * 0.25}s` }}
+        />
       ))}
     </div>
   );
@@ -172,7 +176,7 @@ function Index() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            className="shimmer inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             <MessageCircle className="h-4 w-4" />
             <span className="hidden sm:inline">Pedir orçamento</span>
