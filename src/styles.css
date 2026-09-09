@@ -141,4 +141,77 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Looping animations */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes soft-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.48 0.14 230 / 35%); }
+  50% { box-shadow: 0 0 0 10px oklch(0.48 0.14 230 / 0%); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
+}
+
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+@keyframes hero-zoom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float-y 5s ease-in-out infinite;
+  }
+
+  .animate-soft-pulse {
+    animation: soft-pulse 2.4s ease-out infinite;
+  }
+
+  .animate-twinkle {
+    animation: twinkle 1.8s ease-in-out infinite;
+  }
+
+  .animate-hero-zoom {
+    animation: hero-zoom 14s ease-in-out infinite;
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, oklch(1 0 0 / 25%), transparent);
+    animation: shimmer-sweep 3.2s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-soft-pulse,
+    .animate-twinkle,
+    .animate-hero-zoom,
+    .shimmer::after {
+      animation: none;
+    }
+  }
 }

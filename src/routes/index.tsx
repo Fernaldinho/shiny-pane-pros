@@ -145,7 +145,11 @@ function Stars() {
   return (
     <div className="flex gap-0.5" aria-label="5 de 5 estrelas">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+        <Star
+          key={i}
+          className="h-4 w-4 animate-twinkle fill-amber-400 text-amber-400"
+          style={{ animationDelay: `${i * 0.25}s` }}
+        />
       ))}
     </div>
   );
@@ -172,7 +176,7 @@ function Index() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            className="shimmer inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             <MessageCircle className="h-4 w-4" />
             <span className="hidden sm:inline">Pedir orçamento</span>
@@ -201,7 +205,7 @@ function Index() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                className="animate-soft-pulse inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 <MessageCircle className="h-5 w-5" />
                 Solicitar orçamento grátis
@@ -225,9 +229,9 @@ function Index() {
               alt="Profissional da Disk Vidros instalando box de vidro temperado"
               width={1600}
               height={1000}
-              className="w-full rounded-2xl object-cover shadow-xl"
+              className="animate-hero-zoom w-full rounded-2xl object-cover shadow-xl"
             />
-            <div className="absolute -bottom-5 -left-5 hidden rounded-xl border border-border bg-card p-4 shadow-lg md:block">
+            <div className="animate-float absolute -bottom-5 -left-5 hidden rounded-xl border border-border bg-card p-4 shadow-lg md:block">
               <div className="flex items-center gap-2">
                 <Stars />
               </div>
@@ -296,7 +300,11 @@ function Index() {
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {differentials.map((d) => (
-              <div key={d.title} className="rounded-2xl border border-border bg-card p-6">
+              <div
+                key={d.title}
+                className="animate-float rounded-2xl border border-border bg-card p-6"
+                style={{ animationDelay: `${differentials.indexOf(d) * 0.7}s` }}
+              >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <d.icon className="h-5 w-5" />
                 </div>
@@ -356,7 +364,7 @@ function Index() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                className="shimmer mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 <MessageCircle className="h-5 w-5" />
                 Chamar no WhatsApp
