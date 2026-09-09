@@ -49,7 +49,6 @@ export const Route = createFileRoute("/")({
           "@type": "LocalBusiness",
           name: "Disk Vidros Vidraçaria",
           telephone: "+55-22-99763-7205",
-          url: "https://diskvidroscampos.com.br",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Av. Teresópolis, 257 - Parque Guarus",
@@ -159,9 +158,6 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <a href="#inicio" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary font-bold text-primary-foreground">
-              DV
-            </span>
             <span className="text-lg font-bold tracking-tight">
               Disk Vidros <span className="hidden text-sm font-medium text-muted-foreground sm:inline">Vidraçaria</span>
             </span>
@@ -403,7 +399,7 @@ function Index() {
           <p>
             <strong className="text-foreground">Disk Vidros Vidraçaria</strong> · Campos dos Goytacazes - RJ
           </p>
-          <p>diskvidroscampos.com.br · (22) 99763-7205</p>
+          <p>(22) 99763-7205</p>
         </div>
       </footer>
     </div>
