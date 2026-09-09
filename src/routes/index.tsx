@@ -300,7 +300,11 @@ function Index() {
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {differentials.map((d) => (
-              <div key={d.title} className="rounded-2xl border border-border bg-card p-6">
+              <div
+                key={d.title}
+                className="animate-float rounded-2xl border border-border bg-card p-6"
+                style={{ animationDelay: `${differentials.indexOf(d) * 0.7}s` }}
+              >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <d.icon className="h-5 w-5" />
                 </div>
@@ -360,7 +364,7 @@ function Index() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                className="shimmer mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 <MessageCircle className="h-5 w-5" />
                 Chamar no WhatsApp
